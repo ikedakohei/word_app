@@ -5,4 +5,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :validatable
 
   has_many :comments, dependent: :destroy
+
+  def self.comments_desc
+    left_joins(:comments).includes(:comments).distinct.order("comments.id desc")
+  end
 end

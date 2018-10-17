@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
   before_action :authenticate_user!
   
   def index
-    @users = User.all
+    @users = User.comments_desc
   end
 
   def new
