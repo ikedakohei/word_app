@@ -1,4 +1,9 @@
-h1
-  | Comments#index
-p
-  | Find me in app/views/comments/index.html.erb
+.row
+  .mx-auto
+    - @users.each do |user|
+      - if user.comments.last
+        span.fa.fa-user-o = " #{user.display_name}"
+        .balloon-left
+          p.comment-txt.p-2
+            = user.comments.last.content
+        br
