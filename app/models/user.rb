@@ -4,5 +4,5 @@ class User < ApplicationRecord
   # :omniauthable, :registerable, :recoverable, :rememberable
   devise :database_authenticatable, :validatable
 
-  has_many :comments
+  has_many :comments, dependent: :destroy
 end
