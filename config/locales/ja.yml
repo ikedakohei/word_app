@@ -5,12 +5,16 @@ ja:
         display_name: 名前
         email: メール
         password: パスワード
+      comment:
+        content: ひとこと
     errors:
       messages:
         record_invalid: "バリデーションに失敗しました: %{errors}"
         restrict_dependent_destroy:
           has_one: "%{record}が存在しているので削除できません"
           has_many: "%{record}が存在しているので削除できません"
+  notice:
+    create_comment: つぶやきました
   date:
     abbr_day_names:
     - 日

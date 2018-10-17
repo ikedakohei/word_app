@@ -1,0 +1,13 @@
+.row
+  .mx-auto
+    .card.mt-5.comment-new
+      .card-header.px-5.pt-3
+        h4.text-center
+          .fa.fa-commenting-o = " つぶやく"
+      .card-body.px-5
+        = form_with(model: @comment, local: true) do |f|
+          = render 'shared/error_messages', error_object: @comment
+          .form-group
+            = f.text_area :content, class: "form-control", rows: "3"
+          .form-group
+            = f.submit "投稿", class: "btn btn-outline-secondary btn-block mt-4"
