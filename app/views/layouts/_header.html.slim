@@ -7,11 +7,11 @@ header.sticky-top.border
       - if user_signed_in?
         ul.navbar-nav.mr-auto
           li.nav-item.active
-            = link_to "つぶやく", "#",
-              class: "nav-link text-secondary header-item"
+            = link_to " つぶやく", "#",
+              class: "nav-link text-dark header-item fa fa-commenting-o"
             span.sr-only
               | (現位置)
         = link_to " ログアウト", destroy_user_session_path,
-          class: "nav-link text-secondary header-item fa fa-sign-out",
+          class: "nav-link text-dark header-item fa fa-sign-out",
           method: :delete
           
