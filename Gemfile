@@ -16,7 +16,10 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'pry-rails'
-
+gem 'slim-rails'
+gem 'html2slim'
+gem 'bootstrap', '~> 4.1.3'
+gem 'jquery-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
