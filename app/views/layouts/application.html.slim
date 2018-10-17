@@ -8,4 +8,8 @@ html
   body
     = render 'layouts/header'
     .main.container
+      - flash.each do |message_type, message|
+        - message_type = "secondary" if message_type == "notice"
+        - message_type = "danger"    if message_type == "alert"
+        div class=("alert alert-#{message_type}") = message
       = yield
